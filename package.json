@@ -1,9 +1,9 @@
 {
-  "name": "my-awesome-greeter",
+  "name": "bitkub-node",
   "version": "0.0.1",
-  "description": "A nice greeter",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "description": "A module that brings the Bitkub's official API to Node.js",
+  "main": "lib/bitkub-node.js",
+  "types": "lib/bitkub-node.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
@@ -19,11 +19,11 @@
     "lib/**/*"
   ],
   "keywords": [
-    "Hello",
-    "Greeter"
+    "Bitkub",
+    "API"
   ],
   "author": "Phakhawat Chullamonthon",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.27.2"
   },
