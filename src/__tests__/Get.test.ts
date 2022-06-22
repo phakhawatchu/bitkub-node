@@ -21,3 +21,8 @@ test('Get symbols', async () => {
   const response = await bitkub.symbols();
   expect(response.error).toBe(0);
 });
+
+test('Get ticker', async () => {
+  const response = await bitkub.ticker();
+  expect(typeof response).toBe('object');
+});

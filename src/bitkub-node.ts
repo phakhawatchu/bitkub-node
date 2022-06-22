@@ -24,4 +24,8 @@ export default class Bitkub {
   public async symbols(): Promise<errorResultScheme> {
     return this._api.symbols();
   }
+
+  public async ticker(): Promise<Object> {
+    return this._api.ticker();
+  }
 }

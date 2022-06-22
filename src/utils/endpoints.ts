@@ -18,6 +18,10 @@ const endpoints: endpointsSchema = {
     path: 'api/market/symbols',
     secure: false,
   },
+  ticker: {
+    path: 'api/market/ticker',
+    secure: false,
+  },
 };
 
 export default endpoints;
