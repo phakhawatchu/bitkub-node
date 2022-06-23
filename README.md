@@ -61,4 +61,10 @@ console.info(await bitkub.asks({ lmt: 10, sym: 'THB_BTC' }));
 console.info(await bitkub.books({ lmt: 10, sym: 'THB_BTC' }));
 ```
 
+#### Depth Information
+
+```js
+console.info(await bitkub.depth({ lmt: 10, sym: 'THB_BTC' }));
+```
+
 ## It is currently under development.
