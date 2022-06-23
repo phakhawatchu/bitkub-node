@@ -43,4 +43,22 @@ console.info(await bitkub.ticker());
 console.info(await bitkub.trades({ lmt: 10, sym: 'THB_BTC' }));
 ```
 
+#### Bids Information
+
+```js
+console.info(await bitkub.bids({ lmt: 10, sym: 'THB_BTC' }));
+```
+
+#### Asks Information
+
+```js
+console.info(await bitkub.asks({ lmt: 10, sym: 'THB_BTC' }));
+```
+
+#### Books Information
+
+```js
+console.info(await bitkub.books({ lmt: 10, sym: 'THB_BTC' }));
+```
+
 ## It is currently under development.
