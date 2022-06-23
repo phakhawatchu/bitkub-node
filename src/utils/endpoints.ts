@@ -34,6 +34,30 @@ const endpoints: endpointsSchema = {
       sym: true,
     },
   },
+  bids: {
+    path: 'api/market/bids',
+    secure: false,
+    opts: {
+      lmt: true,
+      sym: true,
+    },
+  },
+  asks: {
+    path: 'api/market/asks',
+    secure: false,
+    opts: {
+      lmt: true,
+      sym: true,
+    },
+  },
+  books: {
+    path: 'api/market/books',
+    secure: false,
+    opts: {
+      lmt: true,
+      sym: true,
+    },
+  },
 };
 
 export default endpoints;

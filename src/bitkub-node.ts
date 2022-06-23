@@ -32,4 +32,16 @@ export default class Bitkub {
   public async trades(opts: object): Promise<errorResultSchema> {
     return this._api.trades(opts);
   }
+
+  public async bids(opts: object): Promise<errorResultSchema> {
+    return this._api.bids(opts);
+  }
+
+  public async asks(opts: object): Promise<errorResultSchema> {
+    return this._api.asks(opts);
+  }
+
+  public async books(opts: object): Promise<errorResultSchema> {
+    return this._api.books(opts);
+  }
 }
