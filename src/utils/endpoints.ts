@@ -58,6 +58,14 @@ const endpoints: endpointsSchema = {
       sym: true,
     },
   },
+  depth: {
+    path: 'api/market/depth',
+    secure: false,
+    opts: {
+      lmt: true,
+      sym: true,
+    },
+  },
 };
 
 export default endpoints;

@@ -44,4 +44,8 @@ export default class Bitkub {
   public async books(opts: object): Promise<errorResultSchema> {
     return this._api.books(opts);
   }
+
+  public async depth(opts: object): Promise<object> {
+    return this._api.depth(opts);
+  }
 }
