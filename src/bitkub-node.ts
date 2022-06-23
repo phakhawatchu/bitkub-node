@@ -29,7 +29,7 @@ export default class Bitkub {
     return this._api.ticker();
   }
 
-  public async trades(opts: object): Promise<object> {
+  public async trades(opts: object): Promise<errorResultScheme> {
     return this._api.trades(opts);
   }
 }
