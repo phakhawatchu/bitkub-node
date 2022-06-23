@@ -31,3 +31,11 @@ test('Get trades', async () => {
   const response = await bitkub.trades({ lmt: 10, sym: 'THB_ZIL' });
   expect(typeof response).toBe('object');
 });
+
+test('trades(): missing {lmt}', async () => {
+  await expect(bitkub.trades({ sym: 'THB_ZIL' })).rejects.toThrowError('{lmt} is missing');
+});
+
+test('trades(): missing {sym}', async () => {
+  await expect(bitkub.trades({ lmt: 10 })).rejects.toThrowError('{sym} is missing');
+});
