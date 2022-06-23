@@ -13,7 +13,7 @@ export interface endpointsSchema {
   [key: string]: endpointSchema;
 }
 
-export interface errorResultScheme {
+export interface errorResultSchema {
   error: string;
   result: Array<object>;
 }

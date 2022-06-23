@@ -4,7 +4,7 @@
  */
 
 import API from './utils/api';
-import { errorResultScheme } from './utils/interface';
+import { errorResultSchema } from './utils/interface';
 
 export default class Bitkub {
   private _api: API;
@@ -21,7 +21,7 @@ export default class Bitkub {
     return this._api.serverTime();
   }
 
-  public async symbols(): Promise<errorResultScheme> {
+  public async symbols(): Promise<errorResultSchema> {
     return this._api.symbols();
   }
 
@@ -29,7 +29,7 @@ export default class Bitkub {
     return this._api.ticker();
   }
 
-  public async trades(opts: object): Promise<errorResultScheme> {
+  public async trades(opts: object): Promise<errorResultSchema> {
     return this._api.trades(opts);
   }
 }
