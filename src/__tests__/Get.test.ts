@@ -2,7 +2,7 @@ import Bitkub from '../bitkub-node';
 
 const bitkub = new Bitkub();
 
-test('Get status from Bitkub', async () => {
+test('status(): {}', async () => {
   const response = await bitkub.status();
   response.forEach((res) => {
     expect(res).toHaveProperty('name');
@@ -11,23 +11,23 @@ test('Get status from Bitkub', async () => {
   });
 });
 
-test('Get server time', async () => {
+test('serverTime(): {}', async () => {
   const response = await bitkub.serverTime();
   // const response = await getServerTime();
   expect(typeof response).toBe('number');
 });
 
-test('Get symbols', async () => {
+test('symbols(): {}', async () => {
   const response = await bitkub.symbols();
   expect(response.error).toBe(0);
 });
 
-test('Get ticker', async () => {
+test('ticker(): {}', async () => {
   const response = await bitkub.ticker();
   expect(typeof response).toBe('object');
 });
 
-test('Get trades', async () => {
+test('trades(): {lmt, sym}', async () => {
   const response = await bitkub.trades({ lmt: 10, sym: 'THB_ZIL' });
   expect(typeof response).toBe('object');
 });
