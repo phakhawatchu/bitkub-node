@@ -15,5 +15,5 @@ export interface endpointsSchema {
 
 export interface errorResultScheme {
   error: string;
-  results: Array<object>;
+  result: Array<object>;
 }
