@@ -67,4 +67,10 @@ console.info(await bitkub.books({ lmt: 10, sym: 'THB_BTC' }));
 console.info(await bitkub.depth({ lmt: 10, sym: 'THB_BTC' }));
 ```
 
+#### TradingView Historical Information
+
+```js
+console.info(await bitkub.tradingView({ symbol: 'BTC_THB', resolution: '5', from: 1633424427, to: 1633427427 }));
+```
+
 ## It is currently under development.
