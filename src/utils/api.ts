@@ -21,25 +21,19 @@ export default class API {
   private _build_endpoint(name: string, endpoint: endpointSchema) {
     return async (opts: object) => {
       const userOpts: any = opts ? opts : {};
-      this._opts_validation(name, endpoint.opts)(userOpts);
       if (endpoint.secure) {
         return null;
       } else {
-        const response = await axios.get(`${BASE_URL}/${endpoint.path}`);
+        const query = opts
+          ? '?' +
+            Object.entries(userOpts)
+              .map(([key, val]) => `${key}=${val}`)
+              .join('&')
+          : '';
+        const response = await axios.get(`${BASE_URL}/${endpoint.path}${query}`);
         if (response.status === 200) return response.data;
         throw response;
       }
-    };
-  }
-
-  private _opts_validation(name: string, endpoint_opts: { [key: string]: boolean }) {
-    return (user_opts: object): void => {
-      const endpoint_keys = Object.entries(endpoint_opts)
-        .filter(([, val]) => val === true)
-        .map(([key]) => key);
-      const required = endpoint_keys.filter((key) => !Object.keys(user_opts).includes(key));
-      if (required.length > 0)
-        throw new Error(`${name}() requires {${endpoint_keys.join(', ')}} but {${required.join(', ')}} is missing.`);
     };
   }
 }
