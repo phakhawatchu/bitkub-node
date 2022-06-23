@@ -13,7 +13,6 @@ test('status(): {}', async () => {
 
 test('serverTime(): {}', async () => {
   const response = await bitkub.serverTime();
-  // const response = await getServerTime();
   expect(typeof response).toBe('number');
 });
 
@@ -33,9 +32,11 @@ test('trades(): {lmt, sym}', async () => {
 });
 
 test('trades(): missing {lmt}', async () => {
-  await expect(bitkub.trades({ sym: 'THB_ZIL' })).rejects.toThrowError('{lmt} is missing');
+  const response = bitkub.trades({ sym: 'THB_ZIL' });
+  await expect(response).rejects.toThrowError('{lmt} is missing');
 });
 
 test('trades(): missing {sym}', async () => {
-  await expect(bitkub.trades({ lmt: 10 })).rejects.toThrowError('{sym} is missing');
+  const response = bitkub.trades({ lmt: 10 });
+  await expect(response).rejects.toThrowError('{sym} is missing');
 });
