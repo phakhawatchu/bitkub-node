@@ -26,3 +26,8 @@ test('Get ticker', async () => {
   const response = await bitkub.ticker();
   expect(typeof response).toBe('object');
 });
+
+test('Get trades', async () => {
+  const response = await bitkub.trades({ lmt: 10, sym: 'THB_ZIL' });
+  expect(typeof response).toBe('object');
+});

@@ -6,6 +6,7 @@
 export interface endpointSchema {
   path: string;
   secure: boolean;
+  opts: { [key: string]: boolean };
 }
 
 export interface endpointsSchema {
@@ -14,5 +15,5 @@ export interface endpointsSchema {
 
 export interface errorResultScheme {
   error: string;
-  results: Array<Object>;
+  results: Array<object>;
 }
