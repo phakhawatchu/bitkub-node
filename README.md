@@ -37,4 +37,10 @@ console.info(await bitkub.symbols());
 console.info(await bitkub.ticker());
 ```
 
+#### Trades Information
+
+```js
+console.info(await bitkub.trades({ lmt: 10, sym: 'THB_BTC' }));
+```
+
 ## It is currently under development.
