@@ -4,7 +4,7 @@
  */
 
 import API from './utils/api';
-import { errorResultSchema } from './utils/interface';
+import { errorResultSchema, tradingViewSchema } from './utils/interface';
 
 export default class Bitkub {
   private _api: API;
@@ -47,5 +47,9 @@ export default class Bitkub {
 
   public async depth(opts: object): Promise<object> {
     return this._api.depth(opts);
+  }
+
+  public async tradingView(opts: object): Promise<tradingViewSchema> {
+    return this._api.tradingView(opts);
   }
 }

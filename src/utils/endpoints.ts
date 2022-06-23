@@ -66,6 +66,16 @@ const endpoints: endpointsSchema = {
       sym: true,
     },
   },
+  tradingView: {
+    path: 'tradingview/history',
+    secure: false,
+    opts: {
+      symbol: true,
+      resolution: true,
+      from: true,
+      to: true,
+    },
+  },
 };
 
 export default endpoints;
