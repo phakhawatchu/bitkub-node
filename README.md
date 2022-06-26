@@ -1,5 +1,7 @@
 # Bitkub's Node.js API
 
+It is currently under development.
+
 ## Aims
 
 This module provide an easier way to make a connection to Bitkub based on the [official Bitkub's API](https://github.com/bitkub/bitkub-official-api-docs).
@@ -72,5 +74,3 @@ console.info(await bitkub.depth({ lmt: 10, sym: 'THB_BTC' }));
 ```js
 console.info(await bitkub.tradingView({ symbol: 'BTC_THB', resolution: '5', from: 1633424427, to: 1633427427 }));
 ```
-
-## It is currently under development.
