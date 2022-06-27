@@ -25,7 +25,8 @@
   "author": "Phakhawat Chullamonthon",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "crypto-js": "^4.1.1"
   },
   "devDependencies": {
     "@types/jest": "^28.1.2",
