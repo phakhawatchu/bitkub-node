@@ -27,3 +27,8 @@ export interface tradingViewSchema {
   t: Array<Number>;
   v: Array<Number>;
 }
+
+export interface credentialSchema {
+  API_KEY: string;
+  API_SECRET: string;
+}
