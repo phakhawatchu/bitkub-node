@@ -1,6 +1,6 @@
 # Bitkub's Node.js API
 
-It is currently under development.
+It is currently under development. Continue this on 1st August 2022
 
 ## Aims
 
